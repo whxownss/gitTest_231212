@@ -1,0 +1,56 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+</head>
+<body>
+    <div class="owl-carousel">
+		  <div> Your Content </div>
+		  <div> Your Content </div>
+		  <div> Your Content </div>
+		  <div> Your Content </div>
+		  <div> Your Content </div>
+		  <div> Your Content </div>
+		  <div> Your Content </div>
+		</div>
+	    <script>
+			var owl = $('.owl-carousel');
+			owl.owlCarousel({
+			    loop:true,
+			    nav:true,
+			    margin:10,
+			    responsive:{
+			        0:{
+			            items:1
+			        },
+			        600:{
+			            items:3
+			        },            
+			        960:{
+			            items:5
+			        },
+			        1200:{
+			            items:6
+			        }
+			    }
+			});
+			owl.on('mousewheel', '.owl-stage', function (e) {
+			    if (e.deltaY>0) {
+			        owl.trigger('next.owl');
+			    } else {
+			        owl.trigger('prev.owl');
+			    }
+			    e.preventDefault();
+			});
+		</script>
+    
+    <script src="owlcarousel/jquery.min.js"></script>
+	<script src="owlcarousel/jquery.mousewheel.min.js"></script>
+	<script src="owlcarousel/owl.carousel.min.js"></script>
+</body>
+</html>
